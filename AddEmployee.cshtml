@@ -1,0 +1,164 @@
+﻿
+@{
+    ViewBag.Title = "AddEmployee";
+}
+
+
+<div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-4">
+                <input type="text" id="txtName" class="form-control" name="Emp_Name" placeholder="Name" required="required" />
+            </div>
+            <div class="col-lg-4">
+                <input type="date" id="txtDob" class="form-control" name="Emp_DOB" placeholder="Date of Birth" required="required" />
+            </div>
+            <div class="col-lg-4">
+                <input type="text" id="txtAddress" class="form-control" name="Emp_Address" placeholder="Address" required="required" />
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-4">
+                <input type="email" id="txtEmail" class="form-control" name="Emp_Email" placeholder="Email" required="required" />
+            </div>
+            <div class="col-lg-4">
+                <label for="male">Gender </label>
+                <input type="radio" id="rdbGender" name="Emp_Sex" value="1" />
+                <label for="male">Male</label>
+                <input type="radio" id="rdbGender" name="Emp_Sex" value="2" />
+                <label for="female">Female</label>
+                <input type="radio" id="rdbGender" name="Emp_Sex" value="3" />
+                <label for="other">Other</label>
+            </div>
+            <div class="col-lg-4">
+                <input type="text" id="txtMobile" class="form-control" name="Emp_MobNo" placeholder="Mobile Number" required="required" />
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-4">
+                <select id="ddlCountry" class="form-control" name="Emp_Country" required="required">
+                    <option>Select Country </option>
+                </select>
+            </div>
+            <div class="col-lg-4">
+                <select id="ddlState" class="form-control" name="Emp_State" required="required">
+                    <option>Select State </option>
+                </select>
+            </div>
+            <div class="col-lg-4">
+                <select id="ddlCity" class="form-control" name="Emp_City" required="required">
+                    <option>Select City </option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-4">
+                <input type="text" id="txtSalary" class="form-control" name="Emp_Salary" placeholder="Salary" required="required" />
+            </div>
+            <div class="col-lg-4">
+
+            </div>
+            <div class="col-lg-4">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group" id="divcheckbox">
+        <div class="row">
+            <div class="col-lg-2"> 
+                <label for="nty" class="form-check-label">
+                    Asp.Net
+                </label>
+                <input type="checkbox" required="required" name="A" id="nty" value="Asp.Net" />
+            </div>
+            <div class="col-lg-2">
+                <label for="ck.netcore" class="form-check-label">
+                    Asp.Net Core
+                </label>
+
+                <input type="checkbox" required="required" id="ck.netcore" name="A" value="Asp.Net Core" />
+            </div>
+            <div class="col-lg-2">
+                <label class="form-check-label">
+                    Angular
+                </label>
+                <input type="checkbox" required="required" name="A" value="Angular" />
+            </div>
+            <div class="col-lg-2">
+                <label class="form-check-label">
+                    Java Script
+                </label>
+                <input type="checkbox" required="required" name="A" value="Java Script" />
+            </div>
+            <div class="col-lg-2">
+                <label class="form-check-label">
+                    PHP
+                </label>
+                <input type="checkbox" required="required" name="A" value="PHP" />
+            </div>
+            <div class="col-lg-2">
+                <label class="form-check-label">
+                    Kotlin
+                </label>
+                <input type="checkbox" required="required" name="A" value="Kotlin" />
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="form-group">
+            <div class="custom-file mb-3">
+                <img id="user_img" height="150" width="130" style="background-color:darkgray;border:solid">
+                <input type="file" id="picfile" name="picf" onchange="show(this)" />
+
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <input type="button" id="btnsave" class="btn btn-success btn-lg btn-block" value="Submit" onclick="SubmitData()" />
+    </div>
+</div>
+
+<hr />
+
+<div>
+    <table id="tblDisplayList" class="table table-hover table-bordered table-responsive">
+        <thead style="background-color:black; color:white">
+            <tr>
+                <td>Image</td>
+                <td>Name</td>
+                <td>Date of Birth</td>
+                <td>Address</td>
+                <td>Email</td>
+                <td>Gender</td>
+                <td>Mobile No.</td>
+                <td>Country</td>
+                <td>State</td>
+                <td>City</td>
+                <td>Salary</td>
+                <td>Language </td>
+                <td>User Action </td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
